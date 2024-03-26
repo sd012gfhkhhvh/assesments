@@ -4,7 +4,7 @@ import { Header } from "./Header";
 import { tableData } from "@/data/tableData";
 
 export const Table = () => {
-  const [data, setData] = useState(tableData);
+  const [data] = useState(tableData);
   return (
     <ChartWrapper>
       <div>

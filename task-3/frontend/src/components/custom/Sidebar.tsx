@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { Menu } from "./Menu";//data
+import { useState } from "react";
+import { Menu } from "./Menu"; //data
 import { menuData } from "@/data/menuData";
 
 export const Sidebar = () => {
-  const [data, setData] = useState(menuData);
+  const [data] = useState(menuData);
 
   return (
     <div className="bg-white w-full px-4 border-s border-1 border-[#EAECF0] flex flex-col justify-between">

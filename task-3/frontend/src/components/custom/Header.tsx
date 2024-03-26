@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 
 export const Header: FC<{header_text: string}> = ({header_text}): JSX.Element => {
   return (
