@@ -54,7 +54,7 @@ export const AccordianItem: FC<SectionItem> = ({
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value={link_title}>
-        <AccordionTrigger onClick={(e) => {color==="#282828" ? setColor("#5F6980") : setColor("#282828")}} className="px-4">
+        <AccordionTrigger onClick={() => {color==="#282828" ? setColor("#5F6980") : setColor("#282828")}} className="px-4">
           <p className={`flex gap-2 w-full text-[${color}] hover:text-[#282828]`}>
             <img src={`${link_logo}`} alt="x" />
             <p className="text-sm font-semibold">{link_title}</p>

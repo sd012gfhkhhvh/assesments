@@ -30,17 +30,17 @@ export const Topbar = () => {
         </div>
 
         {/* items */}
-        <div className="w-[208px] flex gap-4 items-center justify-between">
+        <div className="w-[208px] flex gap-6 items-center justify-between">
           {/* icons */}
           <div className="w-full flex justify-between">
-            <img src="../../assets/bolt.png" alt=""/>
-            <img src="../../assets/bolt.png" alt=""/>
-            <img src="../../assets/bolt.png" alt=""/>
+            <img src="../../assets/bolt.png" alt="x"/>
+            <img src="../../assets/bolt.png" alt="x"/>
+            <img src="../../assets/bolt.png" alt="x"/>
           </div>
 
           {/* avatar */}
-          <div>
-            <img src="../../assets/avatar.png" alt=""/>
+          <div className="">
+            <img src="../../assets/avatar.png" alt="x"/>
           </div>
         </div>
       </div>
