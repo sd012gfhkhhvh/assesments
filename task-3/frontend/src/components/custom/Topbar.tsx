@@ -5,7 +5,7 @@ export const Topbar = () => {
     <div>
       {/* mobile view */}
       <div className="flex flex-col gap-6 md:hidden">
-        <div className="flex justify-between py-2">
+        <div className="flex justify-between p-4 border-b border-[#EAECF0] ">
           {/* logo */}
           <div>
             <img src="../../assets/react.svg" alt="logo" />
@@ -17,7 +17,7 @@ export const Topbar = () => {
         </div>
 
         {/* search-box */}
-        <div className="px-4">
+        <div className="px-4 py-2">
             <FromInput/>
         </div>
       </div>
@@ -51,7 +51,7 @@ export const Topbar = () => {
 const FromInput = () => {
   return (
     <>
-      <form className="flex border-2 rounded-sm px-4 py-1">
+      <form className="flex border border-[#EAECF0] gap-2 rounded-sm px-4 py-2">
         <img src="../../assets/search.png" height={"1rem"} width={"rem"} alt="searicon"></img>
         <input onChange={() => {}} type="text" className="w-full outline-none" placeholder="Search..."></input>
       </form>

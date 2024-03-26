@@ -62,7 +62,7 @@ export const AccordianItem: FC<SectionItem> = ({
           sub_links.map((link) => {
             return (
               <AccordionContent>
-                <a className="ps-8 cursor-pointer text-sm text-[#5F6980] hover:text-[#282828] font-semibold">{link}</a>
+                <p className="w-full ps-8 cursor-pointer text-sm text-[#5F6980] hover:text-[#282828] font-semibold">{link}</p>
               </AccordionContent>
             );
           })}
