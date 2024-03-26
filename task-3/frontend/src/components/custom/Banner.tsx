@@ -1,5 +1,8 @@
 import { Button } from "../ui/button";
 
+//asset import
+import boltIcon from '../../assets/bolt.png'
+
 export const Banner = () => {
   return (
     <div className="w-full flex flex-col md:flex-row md:justify-between p-8 md:px-10 gap-1 justify-center items-center h-[196px] md:h-[128px] bg-[#282828] border-1 rounded-2xl my-4">
@@ -17,7 +20,7 @@ export const Banner = () => {
         size={"lg"}
         className="rounded-3xl px-5 text-md text-[#282828] font-bold"
       >
-        <img src="" alt="" className="me-1.5"/>
+        <img src={boltIcon} alt="bolt" width={"18px"} height={"18px"} className="me-1.5"/>
         Upgrade
       </Button>
     </div>
