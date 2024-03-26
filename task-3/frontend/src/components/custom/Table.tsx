@@ -109,7 +109,7 @@ export const TableRowComponent: FC<TableRow> = ({
       </td>
       <td className="text-[#5F6980]">{amount}</td>
       <td className="text-[#5F6980]">
-        <div className="rounded-full px-3 py-1 w-fit font-semibold" style={{ color: `${color}`, background: `${bgColor}` }}>
+        <div className="rounded-full px-[10px] py-[2px] w-fit font-semibold" style={{ color: `${color}`, background: `${bgColor}` }}>
           {status}
         </div>
       </td>
