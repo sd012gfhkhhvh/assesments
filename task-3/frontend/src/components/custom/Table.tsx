@@ -3,6 +3,10 @@ import { ChartWrapper } from "./ChartWrapper";
 import { Header } from "./Header";
 import { tableData } from "@/data/tableData";
 
+//asset import
+import leftArrow from "../../assets/arrow-left.png";
+import rightArrow from "../../assets/arrow-right.png";
+
 export const Table = () => {
   const [data] = useState(tableData);
   return (
@@ -14,7 +18,7 @@ export const Table = () => {
           <table className="table-fixed w-full">
             {/* table-header */}
             <tr className="text-[#5F6980] bg-[#F9FAFB]">
-              <td className="px-4 py-3 w-[8rem]">Source</td>
+              <td className="px-4 py-3">Source</td>
               <td className="">Amount</td>
               <td className="">Status</td>
               <td className="">User ID</td>
@@ -39,10 +43,10 @@ export const Table = () => {
         {/* ------------ table-end ------ */}
 
         {/* pagination */}
-        <div className="flex justify-center items-center gap-4 py-5">
-          <button>x</button>
-          <p>1/15</p>
-          <button>y</button>
+        <div className="flex justify-center items-center gap-3 py-5">
+          <button className="hover:shadow-lg rounded-lg"><img src={leftArrow} width={"32px"} height={"32px"} alt="icon" /></button>
+          <p className="text-[#282828] text-lg">1/15</p>
+          <button className="hover:shadow-lg rounded-lg"><img src={rightArrow} width={"32px"} height={"32px"} alt="icon" /></button>
         </div>
       </div>
     </ChartWrapper>
@@ -72,10 +76,12 @@ export const TableRowComponent: FC<TableRow> = ({
   return (
     <tr className="border-b border-1-[#EAECF0]">
       <td className="p-4">
-        <p className="flex gap-2">
-          <img src={`${source.logo}`} alt="X" />
+        <div className="flex justify-start items-center gap-4">
+          <div className="">
+            <img src={source.logo} width={"22px"} height={"15px"} alt="X" />
+          </div>
           {source.name}
-        </p>
+        </div>
       </td>
       <td>{amount}</td>
       <td>{status}</td>

@@ -48,7 +48,7 @@ export const Topbar = () => {
         {/* items */}
         <div className="w-[208px] flex gap-5 items-center justify-between">
           {/* icons */}
-          <div className="w-full flex justify-between">
+          <div className="w-full flex justify-between cursor-pointer">
             <img width={"24px"} height={"24px"} src={bellIcon} alt="bell" />
             <img
               width={"24px"}
@@ -65,10 +65,10 @@ export const Topbar = () => {
           </div>
 
           {/* avatar */}
-          <div className="">
+          <div className="cursor-pointer">
             <img
-              width={"40px"}
-              height={"40px"}
+              width={"60px"}
+              height={"60px"}
               src={avatarImage}
               alt="avatar"
             />

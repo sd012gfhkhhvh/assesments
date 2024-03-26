@@ -7,14 +7,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-//asset import
-// import stats from "../../assets/stats.png"
-// import emainIcon from "../../assets/email.png"
-// import userIcon from "../../assets/user.png"
-// import layoutGrid from "../../assets/layout-grid.png"
-// import supportIcon from "../../assets/support.png"
-// import folderIcon from "../../assets/folder.png"
-
 interface SectionItem {
   link_logo: string;
   link_title: string;

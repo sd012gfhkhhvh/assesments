@@ -35,10 +35,16 @@ export const Sidebar = () => {
       </div>
 
       {/* footer */}
-      <div className="py-3 px-5 h-[44px] border-t border-[#EAECF0] flex justify-between items-center">
-        <img src={settings} width={"20px"} height={"20px"} alt="settings" />
-        <img src={logOutIcon} width={"20px"} height={"20px"} alt="logout" />
-        <img src={globIcon} width={"20px"} height={"20px"} alt="glob" />
+      <div className="py-3 px-4 h-[44px] border-t border-[#EAECF0] flex justify-between items-center">
+        <div className="cursor-pointer hover:shadow-lg rounded-lg p-1">
+          <img src={settings} width={"20px"} height={"20px"} alt="settings" />
+        </div>
+        <div className="cursor-pointer hover:shadow-lg rounded-lg p-1">
+          <img src={logOutIcon} width={"20px"} height={"20px"} alt="logout" />
+        </div>
+        <div className="cursor-pointer hover:shadow-lg rounded-lg p-1">
+          <img src={globIcon} width={"20px"} height={"20px"} alt="glob" />
+        </div>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ export const Header: FC<{ header_text: string }> = ({
       <div className="text-md text-[#282828] font-semibold">{header_text}</div>
 
       {/* menu */}
-      <div>
+      <div className="hover:shadow-lg rounded-lg">
         <img className="cursor-pointer" src={verticaDot} width={"20px"} height={"19px"} alt="dot" />
       </div>
     </div>
