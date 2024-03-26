@@ -7,6 +7,10 @@ import { tableData } from "@/data/tableData";
 import leftArrow from "../../assets/arrow-left.png";
 import rightArrow from "../../assets/arrow-right.png";
 
+//enums
+import { Status } from "@/data/tableData";
+import { Colors } from "@/data/tableData";
+
 export const Table = () => {
   const [data] = useState(tableData);
   return (
@@ -44,9 +48,13 @@ export const Table = () => {
 
         {/* pagination */}
         <div className="flex justify-center items-center gap-3 py-5">
-          <button className="hover:shadow-lg rounded-lg"><img src={leftArrow} width={"32px"} height={"32px"} alt="icon" /></button>
+          <button className="hover:shadow-lg rounded-lg">
+            <img src={leftArrow} width={"32px"} height={"32px"} alt="icon" />
+          </button>
           <p className="text-[#282828] text-lg">1/15</p>
-          <button className="hover:shadow-lg rounded-lg"><img src={rightArrow} width={"32px"} height={"32px"} alt="icon" /></button>
+          <button className="hover:shadow-lg rounded-lg">
+            <img src={rightArrow} width={"32px"} height={"32px"} alt="icon" />
+          </button>
         </div>
       </div>
     </ChartWrapper>
@@ -73,21 +81,41 @@ export const TableRowComponent: FC<TableRow> = ({
   joined,
   group,
 }) => {
+  const [color, setColor] = useState("");
+  const [bgColor, setBgColor] = useState("");
+
+  useState(() => {
+    if (status === Status.Active) {
+      setColor(Colors.green_primary);
+      setBgColor(Colors.green_secondary);
+    } else if (status === Status.Cancelled) {
+      setColor(Colors.dark_primary);
+      setBgColor(Colors.dark_secondary);
+    } else if (status === Status.Pending) {
+      setColor(Colors.orange_primary);
+      setBgColor(Colors.orange_secondary);
+    }
+  }, []);
+
   return (
-    <tr className="border-b border-1-[#EAECF0]">
+    <tr className="border-b border-1-[#EAECF0] text-sm hover:shadow-lg rounded-lg">
       <td className="p-4">
         <div className="flex justify-start items-center gap-4">
-          <div className="">
-            <img src={source.logo} width={"22px"} height={"15px"} alt="X" />
+          <div className="px-2 py-1.5 cursor-pointer">
+            <img src={source.logo} width={"25px"} height={"25px"} alt="X" />
           </div>
-          {source.name}
+          <div className="text-[#282828] font-semibold">{source.name}</div>
         </div>
       </td>
-      <td>{amount}</td>
-      <td>{status}</td>
-      <td>{user_id}</td>
-      <td>{joined}</td>
-      <td>{group}</td>
+      <td className="text-[#5F6980]">{amount}</td>
+      <td className="text-[#5F6980]">
+        <div className="rounded-full px-3 py-1 w-fit font-semibold" style={{ color: `${color}`, background: `${bgColor}` }}>
+          {status}
+        </div>
+      </td>
+      <td className="text-[#5F6980]">{user_id}</td>
+      <td className="text-[#5F6980]">{joined}</td>
+      <td className="text-[#5F6980]">{group}</td>
     </tr>
   );
 };

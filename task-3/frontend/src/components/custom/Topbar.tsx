@@ -4,7 +4,7 @@ import bellIcon from "../../assets/bell.png";
 import calendarIcon from "../../assets/calendar.png";
 import layoutGridIcon from "../../assets/layout-grid.png";
 import searchIcon from "../../assets/search.png";
-import logoIcon from "../../assets/logo.png"
+import logoIcon from "../../assets/logo.png";
 
 export const Topbar = () => {
   return (
@@ -14,12 +14,7 @@ export const Topbar = () => {
         <div className="flex justify-between items-center p-4 border-b border-[#EAECF0] ">
           {/* logo */}
           <div>
-            <img
-              width={"100px"}
-              height={"24px"}
-              src={logoIcon}
-              alt="logo"
-            />
+            <img width={"100px"} height={"24px"} src={logoIcon} alt="logo" />
           </div>
           {/* avatar */}
           <div>
@@ -49,19 +44,25 @@ export const Topbar = () => {
         <div className="w-[208px] flex gap-5 items-center justify-between">
           {/* icons */}
           <div className="w-full flex justify-between cursor-pointer">
-            <img width={"24px"} height={"24px"} src={bellIcon} alt="bell" />
-            <img
-              width={"24px"}
-              height={"24px"}
-              src={calendarIcon}
-              alt="calendar"
-            />
-            <img
-              width={"24px"}
-              height={"24px"}
-              src={layoutGridIcon}
-              alt="layout-grid"
-            />
+            <div className="cursor-pointer hover:shadow-lg rounded-lg p-1">
+              <img width={"24px"} height={"24px"} src={bellIcon} alt="bell" />
+            </div>
+            <div className="cursor-pointer hover:shadow-lg rounded-lg p-1">
+              <img
+                width={"24px"}
+                height={"24px"}
+                src={calendarIcon}
+                alt="calendar"
+              />
+            </div>
+            <div className="cursor-pointer hover:shadow-lg rounded-lg p-1">
+              <img
+                width={"24px"}
+                height={"24px"}
+                src={layoutGridIcon}
+                alt="layout-grid"
+              />
+            </div>
           </div>
 
           {/* avatar */}

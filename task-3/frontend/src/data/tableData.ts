@@ -5,13 +5,13 @@ import fingmaLogo from '../assets/apps/figma.png'
 import vueLogo from '../assets/apps/vue.png'
 import angularLogo from '../assets/apps/angular.png'
 
-enum Status {
+export enum Status {
   Active = "Active",
   Pending = "Pending",
   Cancelled = "Cancelled",
 }
 
-enum Colors {
+export enum Colors {
   green_primary = "#20C997",
   green_secondary = "#DCFFF5",
   orange_primary = "#FD7E14",
@@ -20,7 +20,7 @@ enum Colors {
   dark_secondary = "#F2F4F7",
 }
 
-enum Months {
+export enum Months {
   January = "January",
   February = "February",
   March = "March",
@@ -35,7 +35,7 @@ enum Months {
   December = "December",
 }
 
-enum Groups {
+export enum Groups {
   Design = "Design",
   Finance = "Finance",
   Coding = "Coding",
