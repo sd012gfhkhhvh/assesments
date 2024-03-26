@@ -7,6 +7,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+//asset import
+// import stats from "../../assets/stats.png"
+// import emainIcon from "../../assets/email.png"
+// import userIcon from "../../assets/user.png"
+// import layoutGrid from "../../assets/layout-grid.png"
+// import supportIcon from "../../assets/support.png"
+// import folderIcon from "../../assets/folder.png"
+
 interface SectionItem {
   link_logo: string;
   link_title: string;
@@ -56,7 +64,7 @@ export const AccordianItem: FC<SectionItem> = ({
       <AccordionItem value={link_title}>
         <AccordionTrigger onClick={() => {color==="#282828" ? setColor("#5F6980") : setColor("#282828")}} className="px-4">
           <p className={`flex gap-2 w-full text-[${color}] hover:text-[#282828]`}>
-            <img src={`${link_logo}`} alt="x" />
+            <img src={link_logo} width={"20px"} height={"20px" }alt="icon"/>
             <p className="text-sm font-semibold">{link_title}</p>
           </p>
         </AccordionTrigger>
