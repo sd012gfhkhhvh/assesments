@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { ChartWrapper } from "./ChartWrapper";
 import { Header } from "./Header";
 import { tableData } from "@/data/tableData";
@@ -22,7 +22,7 @@ export const Table = () => {
           <table className="table-fixed w-full">
             {/* table-header */}
             <tr className="text-[#5F6980] bg-[#F9FAFB]">
-              <td className="px-4 py-3">Source</td>
+              <td className="px-4 py-3 w-[35%] md:w-fit">Source</td>
               <td className="">Amount</td>
               <td className="">Status</td>
               <td className="">User ID</td>
@@ -84,7 +84,7 @@ export const TableRowComponent: FC<TableRow> = ({
   const [color, setColor] = useState("");
   const [bgColor, setBgColor] = useState("");
 
-  useState(() => {
+  useEffect(() => {
     if (status === Status.Active) {
       setColor(Colors.green_primary);
       setBgColor(Colors.green_secondary);
@@ -95,7 +95,7 @@ export const TableRowComponent: FC<TableRow> = ({
       setColor(Colors.orange_primary);
       setBgColor(Colors.orange_secondary);
     }
-  }, []);
+  }, [status]);
 
   return (
     <tr className="border-b border-1-[#EAECF0] text-sm hover:shadow-lg rounded-lg">
