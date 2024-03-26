@@ -2,10 +2,11 @@ import { useState } from "react";
 import { Menu } from "./Menu"; //data
 import { menuData } from "@/data/menuData";
 
-//asset import 
-import globIcon from "../../assets/globe.png"
-import settings from "../../assets/settings.png"
-import logOutIcon from "../../assets/logout.png"
+//asset import
+import globIcon from "../../assets/globe.png";
+import settings from "../../assets/settings.png";
+import logOutIcon from "../../assets/logout.png";
+import logoIcon from "../../assets/logo.png";
 
 export const Sidebar = () => {
   const [data] = useState(menuData);
@@ -16,7 +17,7 @@ export const Sidebar = () => {
       <div className="flex flex-col gap-8">
         {/* logo */}
         <div className="p-4">
-          <img src="../../assets/logo.png" alt="logo" />
+          <img width={"100px"} height={"24px"} src={logoIcon} alt="logo" />
         </div>
 
         {/* menu */}
