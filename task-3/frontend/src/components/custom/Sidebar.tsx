@@ -6,11 +6,11 @@ export const Sidebar = () => {
   const [data] = useState(menuData);
 
   return (
-    <div className="bg-white w-full px-4 border-s border-1 border-[#EAECF0] flex flex-col justify-between">
+    <div className="bg-white w-full border-s border-1 border-[#EAECF0] flex flex-col justify-between">
       {/* main panel */}
       <div className="flex flex-col gap-8">
         {/* logo */}
-        <div className="py-4">
+        <div className="p-4">
           <img src="../../assets/logo.png" alt="logo" />
         </div>
 
@@ -29,8 +29,10 @@ export const Sidebar = () => {
       </div>
 
       {/* footer */}
-      <div>
-        <p>items</p>
+      <div className="py-3 px-5 border-t border-[#EAECF0] flex justify-between items-center">
+        <img src="../../assets/settings.png" alt="x" />
+        <img src="../../assets/settings.png" alt="x" />
+        <img src="../../assets/settings.png" alt="x" />
       </div>
     </div>
   );

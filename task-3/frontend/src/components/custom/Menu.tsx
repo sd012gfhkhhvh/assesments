@@ -21,14 +21,14 @@ interface Menu {
 
 export const Menu: FC<Menu> = ({ section_title, section_items }) => {
   return (
-    <div>
+    <div className="mb-4">
       {/* section_title */}
-      <p className="text-xs font-semibold text-[#9D9FA1] tracking-widest">
+      <p className="text-xs mb-2 px-4 font-semibold text-[#9D9FA1] tracking-widest">
         {section_title}
       </p>
 
       {/* items */}
-      <div>
+      <div className="">
         {section_items.map((section, index) => {
           return (
             <AccordianItem
@@ -52,15 +52,17 @@ export const AccordianItem: FC<SectionItem> = ({
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value={link_title}>
-        <AccordionTrigger className="">
-          {link_logo}
-          {link_title}
+        <AccordionTrigger className="px-4">
+          <p className="flex gap-2 w-full text-[#5F6980] hover:text-[#282828] ">
+            <img src={`${link_logo}`} alt="x" />
+            <p className="text-sm font-semibold">{link_title}</p>
+          </p>
         </AccordionTrigger>
         {sub_links &&
           sub_links.map((link) => {
             return (
               <AccordionContent>
-                <a className="px-4">{link}</a>
+                <a className="ps-8 cursor-pointer text-sm text-[#5F6980] hover:text-[#282828] font-semibold">{link}</a>
               </AccordionContent>
             );
           })}
