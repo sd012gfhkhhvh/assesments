@@ -51,7 +51,7 @@ export const Topbar = () => {
 const FromInput = () => {
   return (
     <>
-      <form className="flex border border-[#EAECF0] gap-2 rounded-sm px-4 py-2">
+      <form className="flex border border-[#EAECF0] gap-2 rounded-sm px-4 py-2 focus-within:shadow-lg">
         <img src="../../assets/search.png" height={"1rem"} width={"rem"} alt="searicon"></img>
         <input onChange={() => {}} type="text" className="w-full outline-none" placeholder="Search..."></input>
       </form>

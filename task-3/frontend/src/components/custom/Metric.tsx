@@ -35,7 +35,7 @@ export const MetricCard: FC<MetricProps>  = ({header_text, header_amount, info_b
     console.log(badge_bg_color);
     
   return (
-    <div className="h-36 bg-white md:w-[262px] rounded-lg py-3 px-4 flex flex-col gap-2 justify-between shadow-sm">
+    <div className="h-36 bg-white md:w-[262px] rounded-lg py-3 px-4 flex flex-col gap-2 justify-between shadow-sm hover:shadow-lg">
       {/* header */}
       <div>
         <p className="text-sm leading-[14px] text-[#5F6980]">{header_text}</p>
