@@ -6,7 +6,7 @@ export const Charts = () => {
   return (
     <>
       <ChartWrapper>
-        <div className="">
+        <div className="w-full">
           <Header header_text={"Performance"} />
           <ChartComponent />
         </div>

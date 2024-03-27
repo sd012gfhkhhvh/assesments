@@ -14,17 +14,16 @@ import { Colors } from "@/data/tableData";
 export const Table = () => {
   const [data] = useState(tableData);
   return (
-    <div className="w-[95vw] md:w-full">
       <ChartWrapper>
-        <>
+        <div className="w-full">
           <Header header_text={"Installed apps"} />
           {/* ----------- table-start ---------- */}
           {/* table-wrapper */}
-          <div className="overflow-x-auto block whitespace-nowrap md:whitespace-normal md:overflow-hidden">
+          <div className="overflow-x-auto whitespace-nowrap">
             <table className="md:table-fixed md:w-full w-full">
               {/* table-header */}
               <tr className="text-[#5F6980] bg-[#F9FAFB]">
-                <td className="px-4 py-3 w-[35%] md:w-fit">Source</td>
+                <td className="px-4 py-3 md:w-fit">Source</td>
                 <td className="">Amount</td>
                 <td className="">Status</td>
                 <td className="">User ID</td>
@@ -58,9 +57,8 @@ export const Table = () => {
               <img src={rightArrow} width={"32px"} height={"32px"} alt="icon" />
             </button>
           </div>
-        </>
+        </div>
       </ChartWrapper>
-    </div>
   );
 };
 

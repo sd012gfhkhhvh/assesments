@@ -9,7 +9,7 @@ export const Dashboard = () => {
         <div className="w-[20%] h-screen hidden md:flex">
           <Sidebar />
         </div>
-        <div className="w-ful md:w-[80%]">
+        <div className="w-full md:w-[80%]">
           <Topbar />
           <Body />
         </div>
