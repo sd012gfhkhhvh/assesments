@@ -14,50 +14,53 @@ import { Colors } from "@/data/tableData";
 export const Table = () => {
   const [data] = useState(tableData);
   return (
-    <ChartWrapper>
-      <div className="">
-        <Header header_text={"Installed apps"} />
-        {/* table-start */}
-        <div className="overflow-x-scroll md:overflow-hidden">
-          <table className="table-fixed w-full">
-            {/* table-header */}
-            <tr className="text-[#5F6980] bg-[#F9FAFB]">
-              <td className="px-4 py-3 w-[35%] md:w-fit">Source</td>
-              <td className="">Amount</td>
-              <td className="">Status</td>
-              <td className="">User ID</td>
-              <td className="">Joined</td>
-              <td className="">Group</td>
-            </tr>
+    <div className="w-[95vw] md:w-full">
+      <ChartWrapper>
+        <>
+          <Header header_text={"Installed apps"} />
+          {/* ----------- table-start ---------- */}
+          {/* table-wrapper */}
+          <div className="overflow-x-auto block whitespace-nowrap md:whitespace-normal md:overflow-hidden">
+            <table className="md:table-fixed md:w-full w-full">
+              {/* table-header */}
+              <tr className="text-[#5F6980] bg-[#F9FAFB]">
+                <td className="px-4 py-3 w-[35%] md:w-fit">Source</td>
+                <td className="">Amount</td>
+                <td className="">Status</td>
+                <td className="">User ID</td>
+                <td className="">Joined</td>
+                <td className="">Group</td>
+              </tr>
 
-            {/* table-body */}
-            {data.map((item, index) => (
-              <TableRowComponent
-                key={index}
-                source={item.source}
-                amount={item.amount}
-                status={item.status}
-                user_id={item.user_id}
-                joined={item.joined}
-                group={item.group}
-              />
-            ))}
-          </table>
-        </div>
-        {/* ------------ table-end ------ */}
+              {/* table-body */}
+              {data.map((item, index) => (
+                <TableRowComponent
+                  key={index}
+                  source={item.source}
+                  amount={item.amount}
+                  status={item.status}
+                  user_id={item.user_id}
+                  joined={item.joined}
+                  group={item.group}
+                />
+              ))}
+            </table>
+          </div>
+          {/* ------------ table-end ------ */}
 
-        {/* pagination */}
-        <div className="flex justify-center items-center gap-3 py-5">
-          <button className="hover:shadow-lg rounded-lg">
-            <img src={leftArrow} width={"32px"} height={"32px"} alt="icon" />
-          </button>
-          <p className="text-[#282828] text-lg">1/15</p>
-          <button className="hover:shadow-lg rounded-lg">
-            <img src={rightArrow} width={"32px"} height={"32px"} alt="icon" />
-          </button>
-        </div>
-      </div>
-    </ChartWrapper>
+          {/* pagination */}
+          <div className="flex justify-center items-center gap-3 py-5">
+            <button className="hover:shadow-lg rounded-lg">
+              <img src={leftArrow} width={"32px"} height={"32px"} alt="icon" />
+            </button>
+            <p className="text-[#282828] text-lg">1/15</p>
+            <button className="hover:shadow-lg rounded-lg">
+              <img src={rightArrow} width={"32px"} height={"32px"} alt="icon" />
+            </button>
+          </div>
+        </>
+      </ChartWrapper>
+    </div>
   );
 };
 
@@ -109,7 +112,10 @@ export const TableRowComponent: FC<TableRow> = ({
       </td>
       <td className="text-[#5F6980]">{amount}</td>
       <td className="text-[#5F6980]">
-        <div className="rounded-full px-[10px] py-[2px] w-fit font-semibold" style={{ color: `${color}`, background: `${bgColor}` }}>
+        <div
+          className="rounded-full px-[10px] py-[2px] w-fit font-semibold"
+          style={{ color: `${color}`, background: `${bgColor}` }}
+        >
           {status}
         </div>
       </td>
