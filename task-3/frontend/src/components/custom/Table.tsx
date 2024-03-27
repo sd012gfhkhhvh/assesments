@@ -101,7 +101,7 @@ export const TableRowComponent: FC<TableRow> = ({
   return (
     <tr className="border-b border-1-[#EAECF0] text-sm hover:shadow-lg rounded-lg">
       <td className="p-4">
-        <div className="flex flex-col md:flex-row justify-start items-center gap-2 md:gap-4">
+        <div className="flex flex-col md:flex-row md:justify-start md:items-center gap-2 md:gap-4">
           <div className="px-2 py-1.5 cursor-pointer">
             <img src={source.logo} width={"25px"} height={"25px"} alt="X" />
           </div>
