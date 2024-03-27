@@ -23,12 +23,12 @@ export const Table = () => {
             <table className="md:table-fixed w-full">
               {/* table-header */}
               <tr className="text-[#5F6980] bg-[#F9FAFB]">
-                <td className="px-4 py-3 md:w-fit">Source</td>
-                <td className="pe-4">Amount</td>
-                <td className="pe-4">Status</td>
-                <td className="pe-4">User ID</td>
-                <td className="pe-4">Joined</td>
-                <td className="pe-4">Group</td>
+                <td className="ps-4 pe-12 py-3 md:w-fit">Source</td>
+                <td className="pe-12">Amount</td>
+                <td className="pe-12">Status</td>
+                <td className="pe-12">User ID</td>
+                <td className="pe-12">Joined</td>
+                <td className="pe-12">Group</td>
               </tr>
 
               {/* table-body */}
