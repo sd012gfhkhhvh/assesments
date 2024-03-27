@@ -15,20 +15,20 @@ export const Table = () => {
   const [data] = useState(tableData);
   return (
       <ChartWrapper>
-        <div className="w-full">
+        <>
           <Header header_text={"Installed apps"} />
           {/* ----------- table-start ---------- */}
           {/* table-wrapper */}
           <div className="overflow-x-auto whitespace-nowrap">
-            <table className="md:table-fixed md:w-full w-full">
+            <table className="md:table-fixed w-full">
               {/* table-header */}
               <tr className="text-[#5F6980] bg-[#F9FAFB]">
                 <td className="px-4 py-3 md:w-fit">Source</td>
-                <td className="">Amount</td>
-                <td className="">Status</td>
-                <td className="">User ID</td>
-                <td className="">Joined</td>
-                <td className="">Group</td>
+                <td className="pe-4">Amount</td>
+                <td className="pe-4">Status</td>
+                <td className="pe-4">User ID</td>
+                <td className="pe-4">Joined</td>
+                <td className="pe-4">Group</td>
               </tr>
 
               {/* table-body */}
@@ -57,7 +57,7 @@ export const Table = () => {
               <img src={rightArrow} width={"32px"} height={"32px"} alt="icon" />
             </button>
           </div>
-        </div>
+        </>
       </ChartWrapper>
   );
 };
